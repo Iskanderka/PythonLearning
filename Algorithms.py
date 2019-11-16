@@ -66,3 +66,40 @@
 #
 #
 # print(power(5, 3))
+
+
+# #  генерация всех перестановок
+#
+# # # но сначала генерация всех чисел заданной длины в n-ричной СС
+# #
+# #
+# # def generate_numbers(n: int, m: int, prefix=None):
+# #     if m == 0:
+# #         print(prefix)
+# #         return
+# #     prefix = prefix or []
+# #     for digit in range(n):
+# #         prefix.append(digit)
+# #         generate_numbers(n, m-1, prefix)
+# #         prefix.pop()
+# #
+# #
+# # generate_numbers(3, 3)
+#
+#
+# def gen_permutations(n: int, m: int = -1, prefix=None):
+#     if m == -1:
+#         m = n
+#     prefix = prefix or []
+#     if m == 0:
+#         print(*prefix, sep="")
+#         return
+#     for number in range(1, n + 1):
+#         if number in prefix:
+#             continue
+#         prefix.append(number)
+#         gen_permutations(n, m - 1, prefix)
+#         prefix.pop()
+#
+#
+# gen_permutations(3)
